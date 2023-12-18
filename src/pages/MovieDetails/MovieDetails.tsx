@@ -33,7 +33,7 @@ export const MovieDetails = () => {
     });
 
     const CreateCommentMutation = useMutation({
-      mutationFn: (data: { movieId: number; text: string; userId: number }) => addComment(data),
+      mutationFn: (data: { id: number; text: string; userId: number }) => addComment(data),
       onSuccess: () => {
           setNewComment('');
           queryClient.invalidateQueries(['movies']);
@@ -45,7 +45,7 @@ export const MovieDetails = () => {
   
       const userId = Math.random();
       CreateCommentMutation.mutate({
-          movieId: Number(id),
+          id: Number(id),
           text: newComment,
           userId,
       });
