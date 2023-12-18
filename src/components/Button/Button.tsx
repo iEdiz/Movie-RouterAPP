@@ -15,7 +15,7 @@ export const Button = ({ text, onClick, form, type = 'button' }: ButtonProps) =>
       form={form}
       onClick={onClick}
       >
-          {text}
+        {text}
       </button>
   )
 }

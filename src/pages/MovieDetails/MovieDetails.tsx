@@ -29,7 +29,7 @@ export const MovieDetails = () => {
     });
 
     const CreateCommentMutation = useMutation({
-      mutationFn: (data: { id: number; text: string; userId: number }) => addComment(data),
+      mutationFn: (data: { id: number; text: string}) => addComment(data),
       onSuccess: () => {
           setNewComment('');
           queryClient.invalidateQueries(['movies']);
@@ -38,12 +38,10 @@ export const MovieDetails = () => {
 
     const handleSubmitComment = (e: React.FormEvent) => {
       e.preventDefault();
-
-      const userId = Math.random();
+      
       CreateCommentMutation.mutate({
           id: Number(id), 
           text: newComment,
-          userId,
       });
   };
 
@@ -75,7 +73,6 @@ export const MovieDetails = () => {
                 <h3 className={style.commentsTitle}>Comments:</h3>
                 {selectedMovie.comments.map((comment: string, index: number) => (
                   <div key={index} className={style.comments}>
-                    <p>Commented by user with ID: {index}</p>
                     <p>{comment}</p>
                   </div>
                 ))}

@@ -13,7 +13,7 @@ export const getMovies = async () => {
 
 export const getMovieById = async (id: number) => {
     try {
-        const response = await axios.get(`http://localhost:3000/movies/${id}?_embed=comments`);
+        const response = await axios.get(`http://localhost:3000/movies/${id}`);
         return response.data;
     } catch (error) {
         console.error('Error getting singular song data', error);
@@ -32,8 +32,15 @@ export const deleteMovie = async ({ id }: { id: number }) => {
 
 export const addComment = async ({ id, text }: { id: number; text: string }) => {
     try {
-        const response = await axios.post(`http://localhost:3000/movies/${id}`, { text });
-        return response.data;
+        const movies = await axios.get(`http://localhost:3000/movies/${id}`);
+
+        movies.data.comments.push(text);
+
+        const response = await axios.patch(`http://localhost:3000/movies/${id}`, {
+            comments: movies.data.comments
+        })
+
+        return response.data
     } catch (error) {
         console.error('Error adding a comment', error);
         throw error;
