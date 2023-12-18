@@ -1,0 +1,145 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Shawshank Redemption",
+      "genre": "Drama",
+      "director": "Frank Darabont",
+      "release_year": 1994,
+      "rating": 9.3,
+      "image": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
+      "comments": [
+        {
+          "id": 1,
+          "text": "One of the best movies ever!",
+          "userId": 101
+        },
+        {
+          "id": 2,
+          "text": "The ending was so powerful.",
+          "userId": 102
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Godfather",
+      "genre": "Crime",
+      "director": "Francis Ford Coppola",
+      "release_year": 1972,
+      "rating": 9.2,
+      "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+      "comments": [
+        {
+          "id": 4,
+          "text": "An absolute classic!",
+          "userId": 104
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pulp Fiction",
+      "genre": "Crime",
+      "director": "Quentin Tarantino",
+      "release_year": 1994,
+      "rating": 8.9,
+      "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71wPS3A1EYL._AC_UF894,1000_QL80_.jpg",
+      "comments": [
+        {
+          "id": 3,
+          "text": "Tarantino's masterpiece!",
+          "userId": 103
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "The Dark Knight",
+      "genre": "Action",
+      "director": "Christopher Nolan",
+      "release_year": 2008,
+      "rating": 9,
+      "image": "https://m.media-amazon.com/images/I/A1exRxgHRRL.jpg",
+      "comments": []
+    },
+    {
+      "id": 5,
+      "title": "Schindler's List",
+      "genre": "Biography",
+      "director": "Steven Spielberg",
+      "release_year": 1993,
+      "rating": 8.9,
+      "image": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+      "comments": [
+        {
+          "id": 5,
+          "text": "Heart-wrenching and powerful.",
+          "userId": 105
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Forrest Gump",
+      "genre": "Drama",
+      "director": "Robert Zemeckis",
+      "release_year": 1994,
+      "rating": 8.8,
+      "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41Al9falobL._AC_UF894,1000_QL80_.jpg",
+      "comments": []
+    },
+    {
+      "id": 7,
+      "title": "Inception",
+      "genre": "Sci-Fi",
+      "director": "Christopher Nolan",
+      "release_year": 2010,
+      "rating": 8.8,
+      "image": "https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg",
+      "comments": [
+        {
+          "id": 7,
+          "text": "Mind-bending! Nolan's brilliance.",
+          "userId": 107
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "The Matrix",
+      "genre": "Action",
+      "director": "The Wachowskis",
+      "release_year": 1999,
+      "rating": 8.7,
+      "image": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+      "comments": []
+    },
+    {
+      "id": 9,
+      "title": "The Silence of the Lambs",
+      "genre": "Thriller",
+      "director": "Jonathan Demme",
+      "release_year": 1991,
+      "rating": 8.6,
+      "image": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+      "comments": []
+    },
+    {
+      "id": 10,
+      "title": "Fight Club",
+      "genre": "Drama",
+      "director": "David Fincher",
+      "release_year": 1999,
+      "rating": 8.8,
+      "image": "https://i.etsystatic.com/18242346/r/il/c9908e/2412674268/il_570xN.2412674268_1sgm.jpg",
+      "comments": [
+        {
+          "id": 10,
+          "text": "Mind-blowing twist at the end!",
+          "userId": 110
+        }
+      ]
+    }
+  ]
+}
