@@ -31,9 +31,7 @@ export const deleteMovie = async ({ id }: { id: number }) => {
 
 export const addComment = async ({ id, text, userId }: { id: number; text: string; userId: number }) => {
     try {
-        const response = await axios.post(`http://localhost:3000/movies${id}`, { text, userId });
-        console.log(response.data)
-        return response.data;
+        await axios.post(`http://localhost:3000/movies/${id}`, { text, userId });
     } catch (error) {
         console.error('Error adding a comment', error);
         throw error;
