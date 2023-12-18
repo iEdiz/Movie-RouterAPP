@@ -2,16 +2,52 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px
+    gap: 20px;
+    margin: 0 50px;
 }
 
-.movie {
-    width: 200px;
-    height: 300px;
-    border: solid black 1px;
+.title {
+    font-size: 45px;
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: rgb(67, 67, 65);
 }
 
 .image {
     width: 200px;
     height: 300px;
+    border-radius: 20px;
 }
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    height: 300px;
+    width: 100%;
+    align-items: flex-start;
+    padding: 0px 0px 0px 0px;
+    margin: 20px 0 30px 0;
+    border: 2px solid black;
+    border-radius: 22px;
+    background-color: #f5c2ae;
+    box-shadow: 0px 0px 5px 3px rgb(128, 116, 104);
+    word-wrap: break-word;
+    transition: transform 0.3s;
+  }
+  
+  .movie:hover {
+    transform: scale(1.1);
+  }
+  
+  .movie.hover {
+    transform: scale(0.8);
+  }
+  
+  .wrapper:hover .movie {
+    transform: scale(0.8);
+  }
+  
+  .wrapper:hover .movie:hover {
+    transform: scale(1.1);
+  }

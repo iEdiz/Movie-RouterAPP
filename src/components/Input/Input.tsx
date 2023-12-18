@@ -1,3 +1,5 @@
+import style from './Input.module.css'
+
 type InputProps = {
   value: string;
   type?: HTMLInputElement['type'];
@@ -8,11 +10,12 @@ type InputProps = {
 export const Input = ({ value, type, placeholder, onChange}: InputProps) => {
   return (
     <input 
-    placeholder={placeholder} 
-    value={value}
-    type={type}
-    onChange={onChange}
-    > 
+      placeholder={placeholder} 
+      value={value}
+      type={type}
+      onChange={onChange}
+      className={style.input}
+      > 
     </input>
   )
 }

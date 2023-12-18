@@ -26,12 +26,14 @@ export const deleteMovie = async ({ id }: { id: number }) => {
         await axios.delete(`http://localhost:3000/movies/${id}`)
    } catch(error) {
        console.error('Error deleting a song', error)
+       throw error;
    }
 }
 
-export const addComment = async ({ id, text, userId }: { id: number; text: string; userId: number }) => {
+export const addComment = async ({ id, text }: { id: number; text: string }) => {
     try {
-        await axios.post(`http://localhost:3000/movies/${id}`, { text, userId });
+        const response = await axios.post(`http://localhost:3000/movies/${id}`, { text });
+        return response.data;
     } catch (error) {
         console.error('Error adding a comment', error);
         throw error;

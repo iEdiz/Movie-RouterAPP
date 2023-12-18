@@ -14,11 +14,7 @@ type Movie = {
   release_year: number;
   rating: number;
   image: string;
-  comments: {
-    id: number;
-    text: string;
-    userId: number;
-  }[];
+  comments: string[];
 };
 
 export const MovieDetails = () => {
@@ -42,10 +38,10 @@ export const MovieDetails = () => {
 
     const handleSubmitComment = (e: React.FormEvent) => {
       e.preventDefault();
-  
+
       const userId = Math.random();
       CreateCommentMutation.mutate({
-          id: Number(id),
+          id: Number(id), 
           text: newComment,
           userId,
       });
@@ -70,31 +66,30 @@ export const MovieDetails = () => {
     return (
         <div className={style.wrapper}>
             <div key={selectedMovie.id} className={style.clickedMovie}>
-              <img src={selectedMovie.image} alt='Movie image' className={style.clickedImage} />
               <h1 className={style.title}>{selectedMovie.title}</h1>
-              <h3 className={style.genre}>{selectedMovie.genre}</h3>
-              <h5 className={style.releaseYear}>{selectedMovie.release_year}</h5>
-              <h6 className={style.rating}>{selectedMovie.rating}</h6>
+              <h3 className={style.genre}>Genre: {selectedMovie.genre}</h3>
+              <h5 className={style.releaseYear}>Release Year: {selectedMovie.release_year}</h5>
+              <h6 className={style.rating}>Movie Rating: {selectedMovie.rating}</h6>
 
               <div className={style.commentsWrapper}>
-                <h3>Comments:</h3>
-                {selectedMovie.comments.map((comment: { id: number; text: string; userId: number }) => (
-                  <div key={comment.id} className={style.comments}>
-                    <p>Commented by user with ID: {comment.userId}</p>
-                    <p>{comment.text}</p>
+                <h3 className={style.commentsTitle}>Comments:</h3>
+                {selectedMovie.comments.map((comment: string, index: number) => (
+                  <div key={index} className={style.comments}>
+                    <p>Commented by user with ID: {index}</p>
+                    <p>{comment}</p>
                   </div>
                 ))}
-              <div className={style.buttons}>
-                  <form onSubmit={handleSubmitComment}>
-                    <Input 
-                    value={newComment}
-                    placeholder='Add new comment'
-                    onChange={(e) => setNewComment(e.target.value)}
-                    />
-                    <Button text='Comment' type='submit'/>
-                  </form>
-                  <Button text='Delete' onClick={handleDelete} type='submit'/>
-                </div>
+                  <div className={style.buttons}>
+                    <form onSubmit={handleSubmitComment} className={style.form}>
+                      <Input 
+                      value={newComment}
+                      placeholder='Add new comment'
+                      onChange={(e) => setNewComment(e.target.value)}
+                      />
+                      <Button text='Comment' type='submit'/>
+                    </form>
+                    <Button text='Delete' onClick={handleDelete} type='submit'/>
+                  </div>
               </div>
             </div>
         </div>

@@ -32,7 +32,7 @@ export const Movies = () => {
 
   return (
     <div>
-      <h1 className="movie-title">ALL movies</h1>
+      <h1 className={style.title}>ALL movies</h1>
       <div className={style.wrapper}>
         {postsQuery.data.map((movie: Movie) => (
           <div

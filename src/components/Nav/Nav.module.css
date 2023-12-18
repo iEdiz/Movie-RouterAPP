@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.nav {
+    font-size: 30px;
+    text-decoration: none;
+    background-color: rgb(202, 202, 185);
+    padding: 10px 20px; 
+    color: black;
+    border-radius: 10px;
+    border: solid 1px rgb(125, 125, 115);
+    transition: transform 0.3s;
+
+        &:active {
+            background-color: rgb(82, 79, 79);
+            color: rgb(202, 202, 185);
+            border: solid 1px rgb(202, 202, 185);
+        }
+
+        &:focus {
+            transform: scale(1.2);
+        }  
+}
